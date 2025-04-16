@@ -1,0 +1,969 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #fa541c;
+  --secondary-color: #032340;
+  --title-text: #021526;
+  --text-dark: #404040;
+  --gray-dark: #868686;
+  --gray-medium: #cbcbcb;
+  --gray-light: #f9f9f9;
+  --icon-background: #ebf5ff;
+  --background-primary: #f4faff;
+  --background-secondary: #fff7f4;
+  --icon-color: #2f5f8a;
+}
+body {
+  font-family: "Vazirmatn", sans-serif, Arial;
+  direction: rtl;
+  overflow-x: hidden;
+}
+/* قسمت هدر */
+header {
+  width: 100%;
+  position: relative;
+}
+.menu-toggle {
+  display: none;
+}
+.menubar-icon {
+  font-size: 2.5rem;
+  cursor: pointer;
+  position: absolute;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--secondary-color);
+  display: none;
+}
+.menubar-icon:hover {
+  color: var(--primary-color);
+}
+
+.welcome-message {
+  width: 100%;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  background-color: var(--secondary-color);
+  padding: 5px 0;
+  grid-area: welcome;
+}
+
+.header-items {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: "logo search profile";
+  gap: 1rem;
+  align-items: center;
+  margin: 1.5rem 0;
+  width: 90%;
+  margin-inline: auto;
+}
+.logo {
+  grid-area: logo;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logo p {
+  color: var(--text-dark);
+}
+
+.search-input-box {
+  grid-area: search;
+  position: relative;
+}
+
+.search-input-box input {
+  width: 100%;
+  height: 50px;
+  background-color: var(--gray-light);
+  border-radius: 16px;
+  border: 1px solid var(--gray-medium);
+  outline: none;
+  padding-right: 2.5rem;
+}
+.search-input-box img {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.profile-box {
+  grid-area: profile;
+  height: 50px;
+  display: flex;
+  text-align: center;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+.cart-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-color);
+  border-radius: 12px;
+  color: white;
+}
+.cart-icon i {
+  font-size: 24px;
+}
+.login-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+  background-color: var(--gray-light);
+  padding: 8px 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: 0.5s ease;
+}
+.login-link:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+.login-link i {
+  font-size: 24px;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "nav-right nav-left";
+  gap: 1rem;
+  width: 80%;
+  height: 64px;
+  margin-inline: auto;
+  background-color: var(--gray-light);
+  padding: 0 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  align-items: center;
+}
+.navbar-right {
+  grid-area: nav-right;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.navbar-left {
+  grid-area: nav-left;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.navbar li {
+  list-style: none;
+}
+.navbar a {
+  color: #000306;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: 0.5s ease;
+}
+.navbar a:hover {
+  background-color: var(--gray-dark);
+  color: white;
+}
+.navbar i {
+  color: var(--primary-color);
+  margin-left: 5px;
+}
+/* محتوای اصلی صفحه */
+main {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  row-gap: 40px;
+}
+/* ردیف اول */
+.promo-section {
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+}
+.promo-text {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+}
+.promo-text h2,
+p {
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.promo-text :nth-child(3) {
+  color: var(--primary-color);
+}
+.btn {
+  width: 50%;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-direction: row-reverse;
+  align-items: center;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.btn:hover {
+  background-color: var(--primary-color);
+}
+.btn i {
+  font-size: 1.2rem;
+}
+.promo-section img {
+  width: 35%;
+}
+.feature-box {
+  width: 30%;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.feature-item i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  font-size: 28px;
+  color: var(--secondary-color);
+  background-color: var(--icon-background);
+}
+
+.feature-text {
+  padding-right: 8px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.feature-subtext {
+  padding-right: 8px;
+  font-size: 16px;
+  color: var(--text-dark);
+}
+/* ردیف دوم */
+.frame img {
+  width: 100%;
+  margin-top: -200px;
+}
+/* ردیف سوم */
+.products-section {
+  width: 80%;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.product-card {
+  width: 35%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.products-section {
+  position: relative;
+}
+.blurred-info {
+  width: 30%;
+  height: 50%;
+  right: 15%;
+  display: none;
+  position: absolute;
+  z-index: 5;
+  text-align: center;
+  font-size: 12px;
+}
+
+.image-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: 100% 10%;
+  border-radius: 12px 12px 0 0;
+  border: none;
+}
+
+.card-caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  padding: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: var(--secondary-color);
+  border-radius: 0 0 12px 12px;
+  border: none;
+}
+.highlight {
+  color: var(--primary-color);
+}
+
+.info-card {
+  width: 25%;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+}
+
+.info-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+
+.info-card p {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.view-all-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 24px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+.view-all-btn:hover {
+  background-color: var(--secondary-color);
+}
+
+/* ردیف چهارم */
+.hero-image {
+  background-image: url(../images/4.png);
+  height: 50vw;
+  max-height: 600px;
+  min-height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
+
+.hero-text {
+  width: 30%;
+  position: absolute;
+  top: 40%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+.hero-text p {
+  font-size: 1.5rem;
+}
+.hero-text :nth-child(2) {
+  font-weight: bold;
+}
+.hero-image button {
+  margin-top: 30px;
+  background-color: var(--secondary-color);
+}
+.hero-image button:hover {
+  background-color: var(--primary-color);
+}
+/* ردیف پنجم تخفیفات ویژه */
+
+.special-discounts {
+  width: 100%;
+  height: 600px;
+  text-align: center;
+}
+.Discount-title {
+  text-align: center;
+  display: inline;
+  padding: 25px;
+  background-color: white;
+  border-radius: 16px;
+}
+.discounts-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  height: 90%;
+  background-color: var(--background-secondary);
+}
+
+.discount-item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.discount-item img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.info-box {
+  width: 100%;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 0 0 12px 12px;
+}
+.info-box p {
+  padding: 0.2rem;
+}
+.info-box a {
+  display: block;
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+  transition: 0.5s ease;
+}
+.info-box a:hover {
+  color: white;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+}
+
+.info-box :nth-of-type(2) {
+  font-size: 0.9rem;
+}
+.info-box :nth-of-type(3) {
+  font-size: 0.8rem;
+  color: var(--text-dark);
+}
+/* ردیف ششم */
+.sports-shoes-section {
+  width: 100%;
+  height: 600px;
+  text-align: center;
+}
+.sport-shoes {
+  margin-top: -3rem;
+  background-color: white;
+}
+/* ردیف هفتم */
+.bicycle {
+  background-image: url(../images/bicycle.svg);
+}
+/* ردیف هشتم */
+.rideables {
+  background-color: var(--background-primary);
+}
+/* ردیف نهم */
+.camping {
+  background-image: url(../images/comping.svg);
+}
+.camping-text {
+  width: 25%;
+  color: white;
+  top: 25%;
+  left: 72%;
+}
+/* ردیف دهم */
+.sport-news-section {
+  width: 80%;
+  margin: auto;
+  padding: 2rem;
+}
+
+.sport-news-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.news-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.news-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+}
+
+.news-card img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 15px;
+}
+.caption-part {
+  padding: 1rem;
+}
+
+.caption-part h3 {
+  font-size: 1.5rem;
+}
+
+/* ردیف یازدهم  */
+.service-bar {
+  background-color: var(--icon-background);
+}
+.service-bar-items {
+  padding: 20px 50px;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.service-bar-icons {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+.bar-icons-box {
+  width: 170px;
+  height: 170px;
+  background-color: white;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.service-bar-text {
+  font-size: 24px;
+}
+
+/* بخش فوتر */
+.footer {
+  width: 100%;
+  margin-top: 40px;
+  background-color: var(--secondary-color);
+  color: var(--gray-light);
+  font-size: 14px;
+}
+.footer-description {
+  padding: 40px 40px 10px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer-links-right {
+  display: flex;
+  gap: 3rem;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.footer-links-right a {
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--gray-light);
+}
+.link-column img {
+  display: none;
+}
+.link-column h4 {
+  margin-bottom: 1rem;
+}
+.footer-links-left {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin: 1rem 0;
+}
+.social-media {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin: 1rem 0;
+}
+.newsletter {
+  position: relative;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 320px;
+}
+
+.newsletter input {
+  width: 100%;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--gray-dark);
+  border-radius: 8px;
+  padding: 10px 30px 10px 30px;
+  font-size: 14px;
+  color: var(--gray-light);
+}
+
+.newsletter i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: var(--gray-medium);
+}
+
+.newsletter button {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.footer-about-fitland {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.about-fitland {
+  width: 50%;
+  padding: 20px;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.6;
+}
+
+.about-fitland p:first-child {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.about-fitland p:nth-child(2) {
+  font-size: 12px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+.trust-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.trust-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.trust-text {
+  font-size: 12px;
+  font-weight: bold;
+}
+.footer-bottom {
+  font-size: 10px;
+  font-weight: bold;
+  color: var(--gray-medium);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid var(--gray-medium);
+}
+
+.bottom-text-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bottom-text-icon img {
+  width: 16px;
+  height: 16px;
+}
+
+.bottom-text-icon p {
+  margin: 0;
+}
+/* تبلت */
+@media (max-width: 768px) {
+  .menubar-icon {
+    display: block;
+    z-index: 5;
+  }
+
+  .header-items {
+    flex-direction: column;
+    position: relative;
+    margin: 1rem auto;
+  }
+
+  .logo {
+    align-self: flex-start;
+    margin-bottom: 1rem;
+  }
+
+  .search-input-box {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+
+  .search-input-box input {
+    width: 100%;
+    height: 45px;
+  }
+
+  .profile-box,
+  .logo p,
+  .frame img,
+  .info-card {
+    display: none;
+  }
+
+  .navbar {
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--secondary-color);
+    position: absolute;
+    top: 58%;
+    left: 0;
+    height: 100vh;
+    padding: 0.5rem;
+    border-radius: 0;
+    z-index: 15;
+  }
+
+  #menu-toggle:checked ~ nav.navbar {
+    display: flex;
+  }
+
+  .navbar ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .navbar li {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .navbar a {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+  }
+
+  .promo-section {
+    width: 100%;
+    justify-content: center;
+    margin: 0 1rem auto;
+  }
+  .promo-text h2 {
+    font-size: 18px;
+  }
+  .promo-section img {
+    width: 25%;
+  }
+  .btn {
+    width: 100%;
+  }
+  .blurred-info {
+    padding: 1rem;
+    display: block;
+    text-align: center;
+    color: var(--gray-medium);
+  }
+  .blurred-info :nth-child(2) {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 5px;
+    margin-top: 2rem;
+    border: 2px solid var(--gray-medium);
+    font-size: 10px;
+    border-radius: 8px;
+    padding: 8px;
+  }
+  .image-card img {
+    height: 200px;
+  }
+  .blurred-image {
+    filter: blur(5px) brightness(40%);
+  }
+
+  .card-caption p {
+    font-size: 10px;
+  }
+  .hero-image button {
+    display: none;
+  }
+  .hero-text {
+    width: 30%;
+    position: absolute;
+    top: 40%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+  }
+  .hero-text p {
+    font-size: 12px;
+  }
+  .hero-text :nth-child(2) {
+    font-weight: normal;
+  }
+  .camping-text {
+    width: 20%;
+    top: 30%;
+    left: 75%;
+  }
+
+  .discounts-images :nth-child(3) {
+    display: none;
+  }
+
+  .info-box {
+    height: 30%;
+    padding: 12px;
+  }
+  .sports-shoes-section h2 {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .sport-news-section h2 {
+    font-size: 16px;
+  }
+  .second-player {
+    display: none;
+  }
+  .caption-part h3 {
+    font-size: 16px;
+  }
+  .caption-part p {
+    font-size: 14px;
+  }
+  .service-bar-items {
+    flex-wrap: wrap;
+  }
+  .service-bar-content {
+    text-align: center;
+  }
+  .service-bar-text {
+    font-size: 16px;
+  }
+  .footer-links-left {
+    align-items: center;
+  }
+  .footer-links-left p {
+    text-align: center;
+  }
+  .footer-links {
+    flex-direction: column-reverse;
+  }
+}
+/* موبایل */
+@media (max-width: 480px) {
+  .camping-text {
+    left: 72%;
+  }
+  .discount-item img {
+    height: 70%;
+    border-radius: 12px 12px 0 0;
+    object-fit: cover;
+  }
+
+  .discount-item {
+    width: 50vw;
+    height: 40vh;
+  }
+  .footer-links-right {
+    flex-direction: column;
+  }
+  .footer-links-right li,
+  .feature-box {
+    display: none;
+  }
+  .link-column img {
+    display: block;
+  }
+  .link-column {
+    width: 80vw;
+    border-bottom: 1px solid var(--icon-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .link-column h4 {
+    width: 100%;
+  }
+  .input-wrapper {
+    width: 80vw;
+  }
+  .footer-about-fitland {
+    flex-direction: column;
+  }
+  .about-fitland {
+    width: 80vw;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}

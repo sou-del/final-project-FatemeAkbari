@@ -1,0 +1,459 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #fa541c;
+  --secondary-color: #032340;
+  --title-text: #021526;
+  --text-dark: #404040;
+  --gray-dark: #868686;
+  --gray-medium: #cbcbcb;
+  --gray-light: #f9f9f9;
+  --icon-background: #ebf5ff;
+  --background-primary: #f4faff;
+  --background-secondary: #fff7f4;
+  --icon-color: #2f5f8a;
+}
+body {
+  font-family: "Vazirmatn", sans-serif, Arial;
+  direction: rtl;
+  overflow-x: hidden;
+}
+/* قسمت هدر */
+header {
+  width: 100%;
+  position: relative;
+}
+.menu-toggle {
+  display: none;
+}
+.menubar-icon {
+  font-size: 2.5rem;
+  cursor: pointer;
+  position: absolute;
+  left: 2rem;
+  top: 25%;
+  transform: translateY(-50%);
+  color: var(--secondary-color);
+  display: none;
+}
+.menubar-icon:hover {
+  color: var(--primary-color);
+}
+
+.header-items {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 1.5rem 0;
+  padding: 1rem;
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+}
+.logo p {
+  color: var(--text-dark);
+}
+
+.search-input-box {
+  width: 50%;
+  position: relative;
+}
+
+.search-input-box input {
+  width: 100%;
+  height: 50px;
+  background-color: var(--gray-light);
+  border-radius: 16px;
+  border: 1px solid var(--gray-medium);
+  outline: none;
+  padding-right: 2.5rem;
+}
+.search-input-box img {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.profile-box {
+  height: 50px;
+  display: flex;
+  text-align: center;
+  gap: 1rem;
+}
+.cart-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-color);
+  border-radius: 12px;
+  color: white;
+}
+.cart-icon i {
+  font-size: 24px;
+}
+.login-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+  background-color: var(--gray-light);
+  padding: 8px 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: 0.5s ease;
+}
+.login-link:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+.login-link i {
+  font-size: 24px;
+}
+/* منوی هدر */
+.navbar {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 64px;
+  margin-inline: auto;
+  background-color: var(--gray-light);
+  padding: 0 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+}
+.navbar li {
+  list-style: none;
+  display: inline-block;
+}
+
+.navbar a {
+  color: #000306;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: 0.5s ease;
+}
+
+.navbar a:hover {
+  background-color: var(--gray-dark);
+  color: white;
+}
+
+.navbar i {
+  color: var(--primary-color);
+  margin-left: 5px;
+}
+/* بخش فوتر */
+.footer {
+  margin-top: 40px;
+  background-color: var(--secondary-color);
+  color: var(--gray-light);
+  font-size: 14px;
+}
+.footer-description {
+  padding: 40px 40px 10px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer-links-right {
+  display: flex;
+  gap: 3rem;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.footer-links-right a {
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--gray-light);
+}
+.link-column img {
+  display: none;
+}
+.link-column h4 {
+  margin-bottom: 1rem;
+}
+.footer-links-left {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin: 1rem 0;
+}
+.social-media {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin: 1rem 0;
+}
+.newsletter {
+  position: relative;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 320px;
+  margin-top: 0.5rem;
+}
+
+.newsletter input {
+  width: 100%;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--gray-dark);
+  border-radius: 8px;
+  padding: 10px 30px 10px 30px;
+  font-size: 14px;
+  color: var(--gray-light);
+}
+
+.newsletter i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: var(--gray-medium);
+}
+
+.newsletter button {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.footer-about-fitland {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.about-fitland {
+  width: 50%;
+  padding: 20px;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.6;
+}
+
+.about-fitland p:first-child {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.about-fitland p:nth-child(2) {
+  font-weight: normal;
+  font-size: 12px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+.trust-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.trust-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.trust-text {
+  font-size: 12px;
+  font-weight: bold;
+}
+.footer-bottom {
+  font-size: 10px;
+  font-weight: bold;
+  color: var(--gray-medium);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid var(--gray-medium);
+}
+
+.bottom-text-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bottom-text-icon img {
+  width: 16px;
+  height: 16px;
+}
+
+.bottom-text-icon p {
+  margin: 0;
+}
+/* تبلت */
+@media (max-width: 768px) {
+  .menubar-icon {
+    display: block;
+    z-index: 5;
+  }
+
+  .header-items {
+    flex-direction: column;
+    position: relative;
+    margin: 1rem auto;
+  }
+
+  .logo {
+    align-self: flex-start;
+    margin-bottom: 1rem;
+  }
+
+  .search-input-box {
+    width: 90%;
+    margin: 1.5rem 0 0 0;
+  }
+
+  .search-input-box input {
+    width: 100%;
+    height: 45px;
+  }
+  .profile-box,
+  .logo p,
+  .feature-box,
+  .frame img,
+  .info-card {
+    display: none;
+  }
+
+  .navbar {
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--secondary-color);
+    position: absolute;
+    top: 58%;
+    left: 0;
+    height: 100vh;
+    padding: 0.5rem;
+    border-radius: 0;
+    z-index: 15;
+  }
+
+  #menu-toggle:checked ~ nav.navbar {
+    display: flex;
+  }
+
+  .navbar ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .navbar li {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .navbar a {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+  }
+  /* بخش فوتر */
+  footer {
+    margin-bottom: 0;
+  }
+  .footer-links {
+    flex-direction: column;
+  }
+  .footer-links-left {
+    align-items: center;
+  }
+  .footer-links p {
+    text-align: right;
+  }
+  .footer-links {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+  .footer-about-fitland {
+    flex-direction: column;
+  }
+  .about-fitland {
+    width: 90%;
+  }
+}
+/* موبایل */
+@media (max-width: 480px) {
+  .menubar-icon {
+    right: 2rem;
+  }
+  .logo {
+    align-self: center;
+  }
+  .footer-links-right {
+    flex-direction: column;
+  }
+  .footer-links-right li,
+  .feature-box {
+    display: none;
+  }
+  .link-column img {
+    display: block;
+  }
+  .link-column {
+    width: 80vw;
+    border-bottom: 1px solid var(--icon-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .link-column h4 {
+    width: 100%;
+  }
+  .input-wrapper {
+    width: 80vw;
+  }
+  .footer-about-fitland {
+    flex-direction: column;
+  }
+  .about-fitland {
+    width: 80vw;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}

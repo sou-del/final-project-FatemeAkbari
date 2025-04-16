@@ -1,0 +1,638 @@
+@import "/header-footer-styles.css";
+:root {
+  --primary-color: #fa541c;
+  --secondary-color: #032340;
+  --title-text: #021526;
+  --text-dark: #404040;
+  --gray-dark: #868686;
+  --gray-medium: #cbcbcb;
+  --gray-light: #f9f9f9;
+  --icon-background: #ebf5ff;
+  --background-primary: #f4faff;
+  --background-secondary: #fff7f4;
+  --icon-color: #2f5f8a;
+}
+/* بخش اصلی  */
+.product {
+  width: 80%;
+  height: 500px;
+  margin: 40px auto;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.product-imges {
+  width: 50%;
+  height: 100%;
+}
+.other-imges {
+  display: flex;
+  justify-content: space-between;
+}
+.main-img img {
+  width: 100%;
+}
+.product-details {
+  width: 50%;
+  height: 100%;
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.description p {
+  font-size: 14px;
+}
+.price-section {
+  margin-bottom: 2rem;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.discount-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.original-price {
+  font-size: 16px;
+  color: var(--gray-dark);
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+
+.discount {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.size-section {
+  margin-bottom: 2rem;
+}
+
+.size-section label {
+  font-size: 16px;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.sizes {
+  display: flex;
+  gap: 10px;
+}
+.size {
+  width: 60px;
+  height: 40px;
+  background-color: var(--gray-medium);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.color-section {
+  margin-bottom: 2rem;
+}
+
+.color-section label {
+  font-size: 16px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.colors {
+  display: flex;
+  gap: 10px;
+}
+
+.colors > span {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid var(--gray-dark);
+}
+.colors :first-child {
+  background-color: var(--icon-color);
+}
+.colors :last-child {
+  background-color: chartreuse;
+}
+.colors :nth-child(2) {
+  background-color: violet;
+}
+.action-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.quantity button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.quantity span {
+  width: 40px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.add-to-cart {
+  flex-grow: 0.5;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.heart-icon {
+  color: white;
+  background-color: #e6f0fa;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* ///////////////////////////////////////////////////// */
+.products-opinions {
+  width: 80%;
+  margin: 1rem auto;
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  justify-content: center;
+}
+.titles {
+  display: flex;
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+}
+.titles :first-child {
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: var(--icon-background);
+}
+.list {
+  padding: 1rem 2rem;
+  border: 1px solid var(--gray-medium);
+  border-radius: 5px;
+}
+.features {
+  border-bottom: 1px solid var(--gray-medium);
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  padding: 1rem 0;
+}
+.last-feature {
+  border-bottom: none;
+}
+
+.features ul {
+  flex: 0 0 150px;
+  padding-right: 20px;
+}
+.features p {
+  flex: 1;
+}
+.paragraph {
+  padding: 1rem;
+  border: 1px solid var(--gray-medium);
+  border-radius: 5px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+.opinions-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.right-box {
+  width: 60%;
+}
+.left-box {
+  width: 35%;
+}
+
+.opinions {
+  padding: 1rem;
+  border: 1px solid var(--gray-medium);
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+.opinions-first-line,
+.name-img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.left-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem 0;
+}
+.your-opinion p {
+  padding: 1rem 0;
+}
+.your-opinion :last-child {
+  border-top: 1px solid var(--gray-medium);
+  color: var(--gray-medium);
+  font-size: 14px;
+}
+.inputs input,
+textarea {
+  width: 100%;
+  border: 1px solid var(--gray-medium);
+  padding: 10px;
+  border-radius: 5px;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.submit-view {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.submit-view button {
+  width: 40%;
+  padding: 12px;
+  background-color: white;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* ////////////////////////////////////////////////////////////// */
+.sports-shoes-section {
+  width: 80%;
+  margin: 1rem auto;
+}
+.sport-shoes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  height: 90%;
+  margin-top: 1rem;
+}
+.sport-shoes-item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+.sport-shoes-item img {
+  width: 100%;
+  object-fit: cover;
+}
+.info-box {
+  width: 100%;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 0 0 12px 12px;
+}
+.info-box p {
+  padding: 0.2rem;
+}
+.info-box a {
+  display: block;
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+  transition: 0.5s ease;
+}
+.info-box a:hover {
+  color: white;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+}
+
+.info-box :nth-of-type(2) {
+  font-size: 0.9rem;
+}
+.info-box :nth-of-type(3) {
+  font-size: 0.8rem;
+  color: var(--text-dark);
+}
+/* ////////////////////////////////////////////////////////////// */
+.service-bar {
+  background-color: var(--icon-background);
+  margin-top: 40px;
+}
+.service-bar-items {
+  padding: 20px 50px;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.service-bar-icons {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+.bar-icons-box {
+  width: 170px;
+  height: 170px;
+  background-color: white;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.service-bar-text {
+  font-size: 24px;
+}
+/* تبلت */
+@media (max-width: 768px) {
+  .menubar-icon {
+    display: block;
+    z-index: 5;
+  }
+
+  .header-items {
+    flex-direction: column;
+    position: relative;
+    margin: 1rem auto;
+  }
+
+  .logo {
+    align-self: flex-start;
+    margin-bottom: 1rem;
+  }
+
+  .search-input-box {
+    width: 80%;
+    margin: 1.5rem 0 0 0;
+  }
+
+  .search-input-box input {
+    width: 100%;
+    height: 45px;
+  }
+
+  .profile-box,
+  .logo p,
+  .feature-box,
+  .frame img,
+  .info-card {
+    display: none;
+  }
+
+  .navbar {
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--secondary-color);
+    position: absolute;
+    top: 58%;
+    left: 0;
+    height: 100vh;
+    padding: 0.5rem;
+    border-radius: 0;
+    z-index: 15;
+  }
+
+  #menu-toggle:checked ~ nav.navbar {
+    display: flex;
+  }
+
+  .navbar ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .navbar li {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .navbar a {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+  }
+
+  .filter-option {
+    width: 100%;
+  }
+  /* بخش اصلی ریسپانسیو*/
+  .products-opinions {
+    width: 90%;
+  }
+
+  .titles {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .titles h3 {
+    font-size: 1rem;
+  }
+
+  .list {
+    padding: 0.5rem 1rem;
+  }
+
+  .features {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .features ul {
+    flex: none;
+    padding-right: 0;
+  }
+
+  .opinions-box {
+    flex-direction: column;
+  }
+
+  .right-box,
+  .left-box {
+    width: 100%;
+  }
+
+  .left-box {
+    margin-top: 1rem;
+  }
+
+  .submit-view button {
+    width: 50%;
+  }
+  /* //////////////////////////////////////////////// */
+  .sport-shoes :nth-child(3),
+  :nth-child(4) {
+    display: none;
+  }
+
+  .bar-icons-box {
+    width: 120px;
+    height: 120px;
+  }
+  .service-bar-items {
+    flex-wrap: wrap;
+  }
+  .service-bar-content {
+    text-align: center;
+  }
+  .service-bar-text {
+    font-size: 16px;
+  }
+  /* بخش فوتر */
+  footer {
+    margin-bottom: 0;
+  }
+  .footer-links {
+    flex-direction: column;
+  }
+  .footer-links-left {
+    align-items: center;
+  }
+  .footer-links p {
+    text-align: right;
+  }
+  .footer-links {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+  .footer-about-fitland {
+    flex-direction: column;
+  }
+  .about-fitland {
+    width: 90%;
+  }
+}
+/* موبایل */
+@media (max-width: 480px) {
+  .products-opinions {
+    width: 95%;
+    margin: 0.5rem auto;
+  }
+
+  .titles {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .titles h3 {
+    font-size: 0.9rem;
+  }
+
+  .titles :first-child {
+    height: auto;
+    padding: 0.5rem;
+  }
+
+  .list {
+    padding: 0.5rem;
+  }
+
+  .features {
+    padding: 0.5rem 0;
+  }
+
+  .paragraph {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .opinions {
+    padding: 0.5rem;
+  }
+
+  .opinions p {
+    font-size: 0.85rem;
+  }
+
+  .inputs {
+    gap: 1.5rem;
+  }
+
+  .submit-view {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .submit-view button {
+    width: 100%;
+  }
+  .footer-links-right {
+    flex-direction: column;
+  }
+  .footer-links-right li,
+  .feature-box {
+    display: none;
+  }
+  .link-column img {
+    display: block;
+  }
+  .link-column {
+    width: 80vw;
+    border-bottom: 1px solid var(--icon-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .link-column h4 {
+    width: 100%;
+  }
+  .input-wrapper {
+    width: 80vw;
+  }
+  .footer-about-fitland {
+    flex-direction: column;
+  }
+  .about-fitland {
+    width: 80vw;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
+/* ///////////////////////////////////////////////////////////////////// */

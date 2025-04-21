@@ -1,0 +1,237 @@
+@import "/header-footer-styles.css";
+:root {
+  --primary-color: #fa541c;
+  --secondary-color: #032340;
+  --title-text: #021526;
+  --text-dark: #404040;
+  --gray-dark: #868686;
+  --gray-medium: #cbcbcb;
+  --gray-light: #f9f9f9;
+  --icon-background: #ebf5ff;
+  --background-primary: #f4faff;
+  --background-secondary: #fff7f4;
+  --icon-color: #2f5f8a;
+}
+section {
+  position: relative;
+  width: 80%;
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+.payment-method {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.payment-title :first-child {
+  margin-bottom: 1rem;
+}
+.payment-title :last-child {
+  padding: 1rem 0;
+  font-size: 14px;
+  border-top: 1px solid var(--gray-medium);
+}
+.payment-method > p {
+  border-bottom: 1px solid var(--gray-medium);
+  padding: 1rem 0;
+}
+.Cart-Summary {
+  width: 100%;
+  display: flex;
+  margin-bottom: 1rem;
+}
+.Cart-Summary-image {
+  width: 45%;
+  display: flex;
+}
+.Cart-Summary > p {
+  width: 55%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.info-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 1rem;
+}
+.Cart-Summary-image img {
+  border-radius: 8px;
+  border: 1px solid var(--gray-medium);
+}
+.image-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.info-section span {
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+}
+.location-section {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--gray-medium);
+}
+.location-info {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.location-info > p {
+  color: black;
+}
+.sub-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--gray-dark);
+}
+.payment-method > span {
+  text-align: center;
+  width: 12%;
+  background-color: var(--background-secondary);
+  color: #fa541c;
+  padding: 1rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+}
+/* ////////////////////////////////////////////////////// */
+.cart-summary-box {
+  width: 30%;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.breadcrumb {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+}
+.breadcrumb > div {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+.peyment {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid var(--gray-medium);
+  border-radius: 5px;
+  padding: 1rem;
+}
+.blue-bank {
+  border-top: 1px solid var(--gray-medium);
+}
+.pey-gate {
+  width: 100%;
+  padding: 1rem 0;
+}
+.bank-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart-checkout {
+  margin: auto;
+  width: 95%;
+  height: 40px;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.cart-checkout a {
+  text-decoration: none;
+  color: white;
+}
+/* تبلت */
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 5rem;
+  }
+  .payment-method,
+  .cart-summary-box {
+    width: 100%;
+  }
+  .breadcrumb {
+    position: absolute;
+    top: 0;
+  }
+}
+/* موبایل */
+@media (max-width: 480px) {
+  .Cart-Summary {
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+  .Cart-Summary-image {
+    width: 100%;
+  }
+  .Cart-Summary > p {
+    width: 100%;
+  }
+  .info-section {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .location-section {
+    height: 220px;
+    position: relative;
+    padding-top: 4rem;
+    padding: 2.5rem;
+  }
+  .location-section img {
+    width: 150px;
+    height: 130px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .location-info > p {
+    width: 80%;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+  }
+  .sub-info {
+    height: 130px;
+    gap: 0.8rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 2rem;
+  }
+  .payment-method > span {
+    width: 25%;
+  }
+  .peyment {
+    border: none;
+  }
+}

@@ -739,12 +739,13 @@ p {
 @media (max-width: 768px) {
   .menubar-icon {
     display: block;
+    top: 48%;
     z-index: 5;
   }
 
   .header-items {
+    height: 100px;
     flex-direction: column;
-    position: relative;
     margin: 1rem auto;
   }
 
@@ -755,7 +756,9 @@ p {
 
   .search-input-box {
     width: 90%;
-    margin-bottom: 1rem;
+    margin: 0.5rem auto;
+    position: absolute;
+    bottom: 0;
   }
 
   .search-input-box input {
@@ -810,9 +813,9 @@ p {
   }
 
   .promo-section {
-    width: 100%;
+    width: 90%;
     justify-content: center;
-    margin: 0 1rem auto;
+    margin: auto;
   }
   .promo-text h2 {
     font-size: 18px;
@@ -856,6 +859,10 @@ p {
   .hero-image button {
     display: none;
   }
+  .hero-image {
+    width: 100%;
+    height: auto;
+  }
   .hero-text {
     width: 30%;
     position: absolute;
@@ -872,13 +879,19 @@ p {
   .camping-text {
     width: 20%;
     top: 30%;
-    left: 75%;
+    left: 68%;
   }
 
   .discounts-images :nth-child(3) {
     display: none;
   }
-
+  .discounts-images {
+    height: 80%;
+  }
+  .discount-item {
+    width: 40%;
+    justify-content: center;
+  }
   .info-box {
     height: 30%;
     padding: 12px;
@@ -898,6 +911,10 @@ p {
   }
   .caption-part p {
     font-size: 14px;
+  }
+  .bar-icons-box {
+    width: 120px;
+    height: 120px;
   }
   .service-bar-items {
     flex-wrap: wrap;
@@ -920,18 +937,36 @@ p {
 }
 /* موبایل */
 @media (max-width: 480px) {
-  .camping-text {
-    left: 72%;
+  .promo-text {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
   }
-  .discount-item img {
-    height: 70%;
-    border-radius: 12px 12px 0 0;
-    object-fit: cover;
+  .promo-text :first-child,
+  .promo-text :nth-child(4) {
+    font-size: 10px;
+  }
+  .product-card {
+    width: 50%;
   }
 
+  .camping-text {
+    top: 35%;
+    left: 75%;
+  }
+  .discounts-images {
+    height: 100%;
+  }
   .discount-item {
-    width: 50vw;
-    height: 40vh;
+    height: 80%;
+    justify-content: center;
+  }
+  .discount-item img {
+    height: 100%;
+  }
+  .info-box {
+    height: 30%;
+    padding: 12px;
   }
   .footer-links-right {
     flex-direction: column;

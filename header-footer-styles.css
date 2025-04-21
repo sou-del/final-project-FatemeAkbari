@@ -321,31 +321,49 @@ header {
 /* تبلت */
 @media (max-width: 768px) {
   .menubar-icon {
-    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--secondary-color);
     z-index: 5;
+    display: inline-block;
   }
 
   .header-items {
-    flex-direction: column;
+    height: 200px;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
-    margin: 1rem auto;
+    margin: 0 auto;
   }
-
-  .logo {
-    align-self: flex-start;
-    margin-bottom: 1rem;
+  .logo img {
+    width: 150px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    transform: translateX(-50%, -50%);
   }
 
   .search-input-box {
     width: 90%;
-    margin: 1.5rem 0 0 0;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 0;
   }
-
   .search-input-box input {
     width: 100%;
     height: 45px;
   }
+
   .profile-box,
+  .cart-icon {
+    height: 40px;
+  }
   .logo p,
   .feature-box,
   .frame img,
@@ -417,11 +435,20 @@ header {
 }
 /* موبایل */
 @media (max-width: 480px) {
-  .menubar-icon {
-    right: 2rem;
+  .profile-box {
+    gap: 4px;
+    height: 40px;
   }
-  .logo {
-    align-self: center;
+  .login-link {
+    box-shadow: none;
+    background-color: white;
+  }
+  .cart-icon {
+    background-color: white;
+    color: black;
+  }
+  .login-link :last-child {
+    display: none;
   }
   .footer-links-right {
     flex-direction: column;

@@ -33,9 +33,8 @@ main {
   border: 2px solid var(--gray-medium);
   border-radius: 12px;
   padding: 1rem;
-  width: 280px;
   max-height: 50vh;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .filter-option {
   display: flex;
@@ -57,10 +56,8 @@ main {
 .slider {
   position: absolute;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100%;
+  height: 100%;
   background-color: #ccc;
   transition: 0.4s;
   border-radius: 20px;
@@ -73,8 +70,8 @@ main {
   left: 2px;
   bottom: 2px;
   background-color: white;
-  transition: 0.4s;
   border-radius: 50%;
+  transition: 0.4s;
 }
 input:checked + .slider {
   background-color: #2196f3;
@@ -83,42 +80,44 @@ input:checked + .slider {
 input:checked + .slider:before {
   transform: translateX(20px);
 }
-/* نمایش محصولات */
-.filter-sort-icons {
-  flex-direction: row;
+/* //////////////////////////////////////////////// */
+
+.filter-sort-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
   display: none;
+}
+.filter-sort-icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 .sort-options {
   display: flex;
   align-items: center;
   gap: 1rem;
   margin-bottom: 1.5rem;
-  position: relative;
   list-style: none;
+  margin-right: 2rem;
 }
 .sort-options li:hover {
   color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
 }
-.sort-options li:hover::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 8%;
-  height: 2px;
-  background-color: var(--primary-color);
-}
-
 .products-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 20px;
 }
-
+.products-item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  background-color: var(--gray-light);
+}
 .image-wrapper {
   position: relative;
   width: 100%;
@@ -128,17 +127,8 @@ input:checked + .slider:before {
 .products-item img {
   width: 100%;
   object-fit: cover;
-  display: block;
-  position: relative;
-  z-index: 1;
 }
-.products-item {
-  display: flex;
-  flex-direction: column;
-  border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-}
+
 .size-box {
   position: absolute;
   bottom: 0;
@@ -149,12 +139,11 @@ input:checked + .slider:before {
   padding: 5px 10px;
   display: flex;
   gap: 1rem;
-  flex-direction: row;
   justify-content: end;
   flex-wrap: wrap;
   align-items: center;
   opacity: 0;
-  transition: 0.3s ease;
+  transition: 0.5s ease;
   z-index: 2;
 }
 
@@ -167,7 +156,6 @@ input:checked + .slider:before {
   background-color: white;
   margin: 0;
   font-size: 0.85rem;
-  color: black;
   font-weight: 500;
 }
 
@@ -177,8 +165,7 @@ input:checked + .slider:before {
 
 .info-box {
   width: 100%;
-  background-color: var(--gray-light);
-  padding: 10px 20px;
+  padding: 0.5rem 1rem;
   border-radius: 0 0 12px 12px;
   margin-top: 0;
 }
@@ -201,7 +188,7 @@ input:checked + .slider:before {
   color: var(--text-dark);
 }
 
-.sort-numbers {
+.Pagination {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -209,14 +196,18 @@ input:checked + .slider:before {
   list-style: none;
   padding: 1rem;
 }
-.sort-numbers i {
-  padding: 0.8rem;
+.Pagination i {
+  padding: 0.5rem;
   border-radius: 5px;
   color: var(--gray-dark);
   background-color: var(--gray-medium);
 }
-.sort-numbers :nth-child(5) {
-  padding: 1rem;
+.Pagination :nth-child(5) {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 5px;
   background-color: black;
   color: white;
@@ -227,14 +218,15 @@ input:checked + .slider:before {
     margin-inline: 1rem auto;
   }
   .all-products {
-    width: 90vw;
+    width: 90%;
     margin: 0 1.5rem auto;
   }
   .products-container {
     grid-template-columns: repeat(2, 300px);
   }
+
   .filter-panel,
-  .sort-numbers {
+  .Pagination {
     display: none;
   }
   .sort-options {
@@ -246,19 +238,18 @@ input:checked + .slider:before {
     grid-template-columns: 1fr;
   }
   .sort-options,
-  .sort-numbers,
+  .Pagination,
   .size-box,
   .breadcrumb {
     display: none;
   }
-  .all-products {
-    width: 90vw;
-  }
-  .filter-sort-icons {
+
+  .filter-sort-container {
     display: flex;
+    width: 80vw;
   }
   .products-item {
-    width: 90vw;
+    width: 80vw;
     flex-direction: row;
     align-items: center;
     gap: 0;

@@ -425,83 +425,6 @@ textarea {
 }
 /* تبلت */
 @media (max-width: 768px) {
-  .menubar-icon {
-    display: block;
-    z-index: 5;
-  }
-
-  .header-items {
-    flex-direction: column;
-    position: relative;
-    margin: 1rem auto;
-  }
-
-  .logo {
-    align-self: flex-start;
-    margin-bottom: 1rem;
-  }
-
-  .search-input-box {
-    width: 80%;
-    margin: 1.5rem 0 0 0;
-  }
-
-  .search-input-box input {
-    width: 100%;
-    height: 45px;
-  }
-
-  .profile-box,
-  .logo p,
-  .feature-box,
-  .frame img,
-  .info-card {
-    display: none;
-  }
-
-  .navbar {
-    text-align: center;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    background-color: var(--secondary-color);
-    position: absolute;
-    top: 58%;
-    left: 0;
-    height: 100vh;
-    padding: 0.5rem;
-    border-radius: 0;
-    z-index: 15;
-  }
-
-  #menu-toggle:checked ~ nav.navbar {
-    display: flex;
-  }
-
-  .navbar ul {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  .navbar li {
-    width: 100%;
-    margin: 0.5rem 0;
-  }
-
-  .navbar a {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    font-size: 18px;
-  }
-
-  .filter-option {
-    width: 100%;
-  }
-  /* بخش اصلی ریسپانسیو*/
   .product {
     width: 100%;
     height: 80vh;
@@ -590,36 +513,13 @@ textarea {
   .service-bar-text {
     font-size: 16px;
   }
-  /* بخش فوتر */
-  footer {
-    margin-bottom: 0;
-  }
-  .footer-links {
-    flex-direction: column;
-  }
-  .footer-links-left {
-    align-items: center;
-  }
-  .footer-links p {
-    text-align: right;
-  }
-  .footer-links {
-    flex-direction: column-reverse;
-    gap: 1rem;
-  }
-  .footer-about-fitland {
-    flex-direction: column;
-  }
-  .about-fitland {
-    width: 90%;
-  }
 }
 /* موبایل */
 @media (max-width: 480px) {
-  .logo {
+  /* .logo {
     align-self: center;
     margin-bottom: 1rem;
-  }
+  } */
   .product {
     width: 80%;
     height: 80vh;
@@ -713,38 +613,4 @@ textarea {
   .submit-view button {
     width: 100%;
   }
-  .footer-links-right {
-    flex-direction: column;
-  }
-  .footer-links-right li,
-  .feature-box {
-    display: none;
-  }
-  .link-column img {
-    display: block;
-  }
-  .link-column {
-    width: 80vw;
-    border-bottom: 1px solid var(--icon-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .link-column h4 {
-    width: 100%;
-  }
-  .input-wrapper {
-    width: 80vw;
-  }
-  .footer-about-fitland {
-    flex-direction: column;
-  }
-  .about-fitland {
-    width: 80vw;
-  }
-  .footer-bottom {
-    flex-direction: column;
-    gap: 0.8rem;
-  }
 }
-/* ///////////////////////////////////////////////////////////////////// */

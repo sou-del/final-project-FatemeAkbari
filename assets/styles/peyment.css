@@ -187,6 +187,13 @@ section {
 }
 /* موبایل */
 @media (max-width: 480px) {
+  .menubar-icon {
+    right: 90%;
+  }
+  .logo img {
+    left: 80%;
+  }
+
   .Cart-Summary {
     flex-direction: column;
     margin-bottom: 1.5rem;
@@ -200,6 +207,12 @@ section {
   .info-section {
     justify-content: flex-start;
     gap: 1rem;
+  }
+  .menubar-icon {
+    left: 2rem;
+  }
+  .profile-box {
+    display: none;
   }
 
   .location-section {

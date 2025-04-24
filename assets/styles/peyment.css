@@ -118,12 +118,11 @@ section {
   padding: 20px;
 }
 .breadcrumb {
-  width: 100%;
+  width: 300px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1rem;
 }
 .breadcrumb > div {
   display: flex;

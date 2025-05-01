@@ -777,7 +777,7 @@ p {
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    background-color: var(--secondary-color);
+    background-color: var(--gray-medium);
     position: absolute;
     top: 58%;
     left: 0;
@@ -824,6 +824,7 @@ p {
   .btn {
     width: 100%;
   }
+
   .blurred-info {
     padding: 1rem;
     display: flex;

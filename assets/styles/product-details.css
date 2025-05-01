@@ -1,4 +1,4 @@
-@import "/header-footer-styles.css";
+@import "/assets/styles/header-footer-styles.css";
 :root {
   --primary-color: #fa541c;
   --secondary-color: #032340;
@@ -59,9 +59,6 @@
 .product-description p {
   font-size: 14px;
 }
-/* .price-section {
-  margin-bottom: 1rem;
-} */
 
 .price {
   font-size: 24px;
@@ -89,13 +86,9 @@
   font-size: 14px;
 }
 
-/* .size-section {
-  margin-bottom: 2rem;
-} */
-
 .size-section label {
   font-size: 16px;
-  /* margin-bottom: 1rem; */
+
   display: block;
 }
 
@@ -114,10 +107,6 @@
   font-size: 14px;
   cursor: pointer;
 }
-
-/* .color-section {
-  margin-bottom: 2rem;
-} */
 
 .color-section label {
   font-size: 16px;

@@ -377,7 +377,7 @@ header {
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    background-color: var(--secondary-color);
+    background-color: var(--gray-medium);
     position: absolute;
     top: 58%;
     left: 0;
